@@ -5,6 +5,8 @@ public class VideoModel {
     private String title;
     private String size;
 
+    private String image;
+
 
 
     public String getData() {
