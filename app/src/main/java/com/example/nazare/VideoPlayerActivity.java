@@ -3,6 +3,7 @@ package com.example.nazare;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.VideoView;
 
 public class VideoPlayerActivity extends AppCompatActivity {
@@ -35,6 +36,7 @@ public class VideoPlayerActivity extends AppCompatActivity {
     public  void bindData() {
         videoView.setVideoPath(data);
         videoView.start();
+        Log.e("well done","success");
 
     }
 
