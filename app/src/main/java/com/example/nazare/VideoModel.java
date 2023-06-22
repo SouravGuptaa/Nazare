@@ -1,11 +1,14 @@
 package com.example.nazare;
 
+import android.widget.ImageView;
+
 public class VideoModel {
     public String data;
     private String title;
     private String size;
 
     private String image;
+    private ImageView imageView;
 
 
 
