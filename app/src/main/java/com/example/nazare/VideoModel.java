@@ -6,6 +6,7 @@ public class VideoModel {
     private String size;
 
     private String image;
+    private String check;
 
 
 
