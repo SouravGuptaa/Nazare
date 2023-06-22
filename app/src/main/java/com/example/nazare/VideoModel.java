@@ -9,6 +9,7 @@ public class VideoModel {
 
     private String image;
     private ImageView imageView;
+    private String check;
 
 
 
