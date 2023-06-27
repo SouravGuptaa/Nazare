@@ -17,10 +17,10 @@
         android:theme="@style/Theme.Nazare"
         tools:targetApi="31">
         <activity
-            android:name=".VideoPlayerActivity"
+            android:name=".GalleryViewActivity"
             android:exported="false" />
         <activity
-            android:name=".MusicActivity"
+            android:name=".GalleryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

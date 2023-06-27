@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Nazare</string>
     <string name="sunahare_nazare_txt">Sunahare Nazare</string>
-    <string name="tap_here_to_see_videos_txt">Tap here to see videos</string>
-    <string name="videosong_txt">videosong</string>
+    <string name="music_txt">Music</string>
+    <string name="video_txt">Video</string>
+    <string name="image_txt">Image</string>
+    <string name="objectname_txt">Objectname</string>
+    <string name="images_txt">images</string>
+    <string name="objectnames_txt">objectnames</string>
+
 </resources>

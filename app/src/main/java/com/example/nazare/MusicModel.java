@@ -1,11 +1,14 @@
 package com.example.nazare;
 
-public class VideoModel {
-    private String data;
+public class MusicModel {
+
+    public String data;
     private String title;
     private String artist;
     private String album;
+    private String track;
     private String size;
+
 
 
     public String getData() {
@@ -32,7 +35,6 @@ public class VideoModel {
         this.artist = artist;
     }
 
-
     public String getAlbum() {
         return album;
     }
@@ -41,6 +43,13 @@ public class VideoModel {
         this.album = album;
     }
 
+    public String getTrack() {
+        return track;
+    }
+
+    public void setTrack(String track) {
+        this.track = track;
+    }
 
     public String getSize() {
         return size;
@@ -51,5 +60,5 @@ public class VideoModel {
     }
 
 
-
 }
+
