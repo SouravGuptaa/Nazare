@@ -1,11 +1,52 @@
 package com.example.nazare;
 
-public class VideoModel {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class VideoModel implements Parcelable {
     private String data;
     private String title;
     private String artist;
-    private String album;
     private String size;
+
+    public VideoModel() {
+
+    }
+
+    protected VideoModel(Parcel in) {
+        data = in.readString();
+        title = in.readString();
+        artist = in.readString();
+        size = in.readString();
+    }
+
+    public static final Creator<VideoModel> CREATOR = new Creator<VideoModel>() {
+        @Override
+        public VideoModel createFromParcel(Parcel in) {
+            return new VideoModel(in);
+        }
+
+        @Override
+        public VideoModel[] newArray(int size) {
+            return new VideoModel[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel parcel, int i) {
+        parcel.writeString(data);
+        parcel.writeString(title);
+        parcel.writeString(artist);
+        parcel.writeString(size);
+
+    }
 
 
     public String getData() {
@@ -33,15 +74,6 @@ public class VideoModel {
     }
 
 
-    public String getAlbum() {
-        return album;
-    }
-
-    public void setAlbum(String album) {
-        this.album = album;
-    }
-
-
     public String getSize() {
         return size;
     }
@@ -49,7 +81,6 @@ public class VideoModel {
     public void setSize(String size) {
         this.size = size;
     }
-
 
 
 }

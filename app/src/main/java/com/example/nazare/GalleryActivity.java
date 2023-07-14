@@ -126,7 +126,6 @@ public class GalleryActivity extends AppCompatActivity {
                 musicModel.setArtist(cursor.getString(cursor.getColumnIndexOrThrow(MediaStore.Audio.Media.ARTIST)));
                 musicList.add(musicModel);
 
-
             }
             cursor.close();
 

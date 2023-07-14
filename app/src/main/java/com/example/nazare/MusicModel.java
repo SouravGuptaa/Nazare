@@ -1,15 +1,55 @@
 package com.example.nazare;
 
-public class MusicModel {
+import android.os.Parcel;
+import android.os.Parcelable;
 
-    public String data;
+public class MusicModel implements Parcelable {
+    private String data;
     private String title;
     private String artist;
     private String album;
     private String track;
     private String size;
 
+    public MusicModel() {
+        // Default constructor
+    }
 
+    protected MusicModel(Parcel in) {
+        data = in.readString();
+        title = in.readString();
+        artist = in.readString();
+        album = in.readString();
+        track = in.readString();
+        size = in.readString();
+    }
+
+    public static final Creator<MusicModel> CREATOR = new Creator<MusicModel>() {
+        @Override
+        public MusicModel createFromParcel(Parcel in) {
+            return new MusicModel(in);
+        }
+
+        @Override
+        public MusicModel[] newArray(int size) {
+            return new MusicModel[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(data);
+        dest.writeString(title);
+        dest.writeString(artist);
+        dest.writeString(album);
+        dest.writeString(track);
+        dest.writeString(size);
+    }
 
     public String getData() {
         return data;
@@ -61,4 +101,5 @@ public class MusicModel {
 
 
 }
+
 

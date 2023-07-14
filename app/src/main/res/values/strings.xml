@@ -7,5 +7,10 @@
     <string name="objectname_txt">Objectname</string>
     <string name="images_txt">images</string>
     <string name="objectnames_txt">objectnames</string>
+    <string name="photo_txt">photo</string>
+    <string name="previous_txt">previous</string>
+    <string name="pause_txt">pause</string>
+    <string name="next_txt">next</string>
+    <string name="play_txt">play</string>
 
 </resources>

@@ -39,6 +39,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ItemView
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ItemViewHolder holder, int position) {
+        int mPosition = position;
         if (TYPE.equals(IMAGE)){
             ImageModel imageModel = (ImageModel) list.get(position);
             holder.tvObject.setText(imageModel.getTitle());
@@ -51,12 +52,14 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ItemView
                     Intent intent = new Intent(context, GalleryViewActivity.class);
                     intent.putExtra("data",data);
                     intent.putExtra("type",IMAGE);
+                    intent.putExtra("list",list);
+                    intent.putExtra("position",mPosition);
                     context.startActivity(intent);
 
                 }
             });
         } else if (TYPE.equals(MUSIC)) {
-            MusicModel musicModel = (MusicModel) list.get(position);
+            MusicModel musicModel = (MusicModel) list.get(mPosition);
             holder.tvObject.setText(musicModel.getTitle());
             holder.tvObjects.setText(musicModel.getArtist());
 
@@ -67,6 +70,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ItemView
                     Intent intent = new Intent(context, GalleryViewActivity.class);
                     intent.putExtra("data",data);
                     intent.putExtra("type",MUSIC);
+                    intent.putExtra("list",list);
+                    intent.putExtra("position",mPosition);
                     context.startActivity(intent);
 
                 }
@@ -83,6 +88,8 @@ public class GalleryAdapter extends RecyclerView.Adapter<GalleryAdapter.ItemView
                     Intent intent = new Intent(context, GalleryViewActivity.class);
                     intent.putExtra("data",data);
                     intent.putExtra("type",VIDEO);
+                    intent.putExtra("list",list);
+                    intent.putExtra("position",mPosition);
                     context.startActivity(intent);
 
                 }
